@@ -20,6 +20,9 @@
       enable = true;
       openFirewall = true;
     };
+    mullvad-vpn = {
+      enable = true;
+    };
   };
   nixpkgs.config.permittedInsecurePackages = [
     "aspnetcore-runtime-6.0.36"

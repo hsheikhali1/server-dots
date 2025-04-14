@@ -66,7 +66,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.harun = {
      isNormalUser = true;
-     extraGroups = [ "wheel", "podman", "networkmanager" ];
+     extraGroups = [ "wheel" "podman" "networkmanager" ];
      home = "/home/harun";
      description = "Harun Sheikhali";
   };
@@ -83,6 +83,7 @@
     fd
     nixd
     nixpkgs-fmt
+    mullvad-vpn
   #   wget
  ];
 

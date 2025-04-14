@@ -6,11 +6,6 @@
     ./modules/nvim.nix
   ];
 
-  environment.systemPackages = [pkgs.mullvad-vpn];
-  services = {
-    mullvad-vpn.enable = true;
-  };
-
   home.username = "harun";
   home.homeDirectory = "/home/harun";
   home.stateVersion = "24.11";

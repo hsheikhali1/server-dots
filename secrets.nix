@@ -7,7 +7,12 @@ let
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJCcCswTRab6jUjBA/aRsPa0t82e6M49LNeZdTkGEomD root@nixos"
   ];
 
-  secrets = [];
+  secrets = [
+    "secrets/mullvad_wireguard.age"
+    "secrets/wireguard_server.age"
+    "secrets/cleanuperr_env.age"
+    "secrets/homarr_env.age"
+  ];
 
 in
   builtins.listToAttrs (map
