@@ -1,10 +1,11 @@
 let
   users = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIC3yvkgFUs8R4CMrcZjlCrm0aGNl/nOVVV7VZKrsrFHN harun@nixos"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHL0QQS2fDCYw+rExb9Fz3CKezzksjDGjCMz7Bt7f3aW harun@nixos"
+
   ];
 
   systems = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJCcCswTRab6jUjBA/aRsPa0t82e6M49LNeZdTkGEomD root@nixos"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINEcnZ7u+D3Pd7a76DxlkzZd46YerG5Bt0dlTrYtAB1W root@nixos"
   ];
 
   secrets = [

@@ -96,7 +96,7 @@
   # };
 
   # List services that you want to enable:
-
+  #age.identityPaths = [ "/home/harun/.ssh/id_ed25519" ];
   # Enable the OpenSSH daemon.
   services = {
     fail2ban.enable = true;

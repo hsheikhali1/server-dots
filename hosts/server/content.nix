@@ -20,6 +20,10 @@
       enable = true;
       openFirewall = true;
     };
+    prowlarr = {
+      enable = true;
+      openFirewall = true;
+    };
     mullvad-vpn = {
       enable = true;
     };

@@ -3,7 +3,7 @@
 {
  ## import modules here
   imports = [
-    ./modules/nvim.nix
+     ./modules/nvim.nix
   ];
 
   home.username = "harun";

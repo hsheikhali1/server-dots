@@ -2,11 +2,11 @@
 let
   configDir = "/var/lib/qbittorrentvpn";
   wireguardConfigPath = config.age.secrets.mullvad_wireguard.path;
-  tcpPorts = [8000 8118 9118 58946];
+  tcpPorts = [8080 8118 9118 58946];
   udpPorts = [58946];
 in
 {
-  age.secrets.mullvad_wireguard.file = ../../secrets/mullvad_wireguard.age
+  age.secrets.mullvad_wireguard.file = ../../secrets/mullvad_wireguard.age;
 
   systemd.tmpfiles.rules = [
     "d ${configDir} 055 qbittorrentvpn qbittorrentvpn - -"

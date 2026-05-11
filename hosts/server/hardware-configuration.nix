@@ -24,6 +24,12 @@
       options = [ "fmask=0022" "dmask=0022" ];
     };
 
+  fileSystems."/mnt/jellyfin" =
+    {
+      device = "/dev/disk/by-uuid/8cb291a0-0314-4046-82b0-760c4e8e709e";
+      fsType = "ext4";
+    };
+
   swapDevices =
     [ { device = "/dev/disk/by-uuid/fb7011b3-0e9f-4713-a421-4800bcc1d483"; }
     ];
@@ -33,13 +39,14 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking = {
-  	useDHCP = lib.mkDefault true;
-	hostName = "nixos-server";
-	defaultGateway = "192.168.1.1";
-	interfaces.enp1s0.ipv4.addresses = [{
-		address = "192.168.1.180";
-		prefixLength = 24;
-	}];
+    useDHCP = lib.mkDefault true;
+    hostName = "nixos-server";
+    defaultGateway = "192.168.1.1";
+    nameservers = ["1.1.1.1" "1.0.0.1"];
+    interfaces.enp1s0.ipv4.addresses = [{
+      address = "192.168.1.180";
+      prefixLength = 24;
+    }];
   };
   # networking.interfaces.enp1s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlo1.useDHCP = lib.mkDefault true;

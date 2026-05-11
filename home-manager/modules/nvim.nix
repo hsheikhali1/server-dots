@@ -2,8 +2,7 @@
 
   xdg.configFile = {
     nvim = {
-      source = config.lib.file.mkOutOfStoreSymlink
-        "${config.home.homeDirectory}/nixos/nvim";
+      source = ../../nvim;
       recursive = true;
     };
   };
@@ -36,8 +35,8 @@
       lua
       shellcheck
       marksman
-      sumneko-lua-language-server
-      nodePackages_latest.typescript-language-server
+      lua-language-server
+      #nodePackages_latest.typescript-language-server
       yaml-language-server
 
       # other utils and plugin dependencies
@@ -57,7 +56,4 @@
     ];
 
   };
-
-  
-
 }
